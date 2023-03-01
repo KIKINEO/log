@@ -1,0 +1,282 @@
+
+
+PREPROCESS - START
+
+Working on images s1a-iw1-slc-vv-20230128t153425-20230128t153450-046986-05a2b6-004 s1a-iw1-slc-vv-20230209t153424-20230209t153449-047161-05a88a-004 ...
+rm: No match.
+rm: No match.
+pre_proc.csh S1_TOPS s1a-iw1-slc-vv-20230128t153425-20230128t153450-046986-05a2b6-004 s1a-iw1-slc-vv-20230209t153424-20230209t153449-047161-05a88a-004  -skip_master 0
+pre_proc.csh
+
+ Pre-Process S1_TOPS data - START
+
+ln: failed to create symbolic link './dem.grd': File exists
+S1_20230128_153425_F1
+S1_20230209_153424_F1
+Reading in 5649 lines of info from XML...
+Writing 16 lines for orbit...
+Reading in 5649 lines of info from XML...
+Writing 16 lines for orbit...
+Writing 52 lines of precise orbit for the LED file...
+Successfully opened S1_20230128_153425_F1.PRM 
+Writing 53 lines of precise orbit for the LED file...
+Successfully opened S1_20230209_153424_F1.PRM 
+......master LED file S1_20230128_153425_F1.LED 
+.........aligned LED file S1_20230209_153424_F1.LED 
+......master LED file S1_20230128_153425_F1.LED 
+.........aligned LED file S1_20230209_153424_F1.LED 
+[1] 12417
+[2] 12418
+[2]    Done                   SAT_llt2rat S1_20230209_153424_F1.PRM 1 < topo.llt > aligned.ratll
+[1]  + Done                   SAT_llt2rat S1_20230128_153425_F1.PRM 1 < topo.llt > master.ratll
+blockmedian [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+blockmedian (gmtapi_init_grdheader): Please select compatible -R and -I values
+blockmedian [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+blockmedian (gmtapi_init_grdheader): Please select compatible -R and -I values
+[1] 12463
+[2] 12464
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface [WARNING]: (x_max-x_min) must equal (NX + eps) * x_inc), where NX is an integer and |eps| <= 0.0001.
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface (gmtapi_init_grdheader): Please select compatible -R and -I values
+surface [WARNING]: Your grid dimensions are mutually prime.  Convergence is very unlikely.
+surface [WARNING]: Your grid dimensions are mutually prime.  Convergence is very unlikely.
+surface [WARNING]: 28 unusable points were supplied; these will be ignored.
+surface [WARNING]: You should have pre-processed the data with block-mean, -median, or -mode.
+surface [WARNING]: Check that previous processing steps write results with enough decimals.
+surface [WARNING]: Possibly some data were half-way between nodes and subject to IEEE 754 rounding.
+surface [WARNING]: 28 unusable points were supplied; these will be ignored.
+surface [WARNING]: You should have pre-processed the data with block-mean, -median, or -mode.
+surface [WARNING]: Check that previous processing steps write results with enough decimals.
+surface [WARNING]: Possibly some data were half-way between nodes and subject to IEEE 754 rounding.
+[2]    Done                   gmt surface atmp.xyz -bi3d -R0/21912/0/12192 -I16/8 -T0.3 -Gatmp.grd -N1000 -r
+[1]  + Done                   gmt surface rtmp.xyz -bi3d -R0/21912/0/12192 -I16/8 -T0.3 -Grtmp.grd -N1000 -r
+Working on burst  #1 #2 #3 #4 #5 #6 #7 #8 #9
+number of points clipped to short int 19 
+Reading in 5649 lines of info from XML...
+Writing 16 lines for orbit...
+Writing SLC..Image Size: 21912 X 12192...
+Reading in range and azimuth shifts table...
+Working on burst  #1 #2 #3 #4 #5 #6 #7 #8 #9
+number of points clipped to short int 12 
+Reading in 5649 lines of info from XML...
+Writing 16 lines for orbit...
+Writing SLC..Image Size: 21912 X 12192...
+Writing 52 lines of precise orbit for the LED file...
+Writing 53 lines of precise orbit for the LED file...
+Successfully opened S1_20230128_153425_F1.PRM 
+Successfully opened S1_20230209_153424_F1.PRM 
+
+ Pre-Process S1_TOPS data - END
+
+ 
+PREPROCESS - END
+
+rm: No match.
+rm: No match.
+ 
+ALIGN.CSH - START
+
+
+ALIGN.CSH - END
+
+
+clean up topo/ folder
+
+ 
+DEM2TOPO_RA.CSH - START
+USER SHOULD PROVIDE DEM FILE
+Working over 0/21912/0/12192 ... 
+ range decimation is:  2
+blockmedian [INFORMATION]: Provides 3, expects 3-column binary data
+blockmedian [INFORMATION]: Processing input table data
+blockmedian [INFORMATION]: Cartesian input grid
+blockmedian [INFORMATION]: Cartesian input grid
+blockmedian [INFORMATION]: W: 0 E: 21912 S: 0 N: 12192 n_columns: 10956 n_rows: 6096
+blockmedian [INFORMATION]: Input 3 columns via binary records using format ddd
+blockmedian [INFORMATION]: Output 3 columns via binary records using format ddd
+blockmedian [INFORMATION]: Reading Data Table from Standard Input stream
+blockmedian [INFORMATION]: Writing Data Table to Standard Output stream
+blockmedian [INFORMATION]: Calculating block medians
+blockmedian [INFORMATION]: N read: 20618943 N used: 20530920 outside_area: 88023 N cells filled: 20100081
+surface [INFORMATION]: Provides 3, expects 3-column binary data
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Internally speed up convergence by using the larger region -R-565/22475/-49/12239 (go from 10956 x 6096 to optimal 11520 x 6144, with speedup-factor 3.1944821)
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Cartesian input grid
+surface [INFORMATION]: Grid domain: W: 0 E: 21912 S: 0 N: 12192 n_columns: 11520 n_rows: 6144 [pixel registration]
+surface [INFORMATION]: Processing input table data
+surface [INFORMATION]: Input 3 columns via binary records using format ddd
+surface [INFORMATION]: Reading Data Table from file temp.rat
+surface [INFORMATION]: Minimum value of your dataset x,y,z at: 21862.4023438 2003.58203125 -20.8448047638
+surface [INFORMATION]: Maximum value of your dataset x,y,z at: 11543.1386719 6582.00390625 3431.72265625
+surface [INFORMATION]: Eliminate data points that are not nearest a node.
+surface [WARNING]: 156648 unusable points were supplied; these will be ignored.
+surface [WARNING]: You should have pre-processed the data with block-mean, -median, or -mode.
+surface [WARNING]: Check that previous processing steps write results with enough decimals.
+surface [WARNING]: Possibly some data were half-way between nodes and subject to IEEE 754 rounding.
+surface [INFORMATION]: Plane fit z = 691.095 + (-0.0401683 * col) + (0.15466 * row)
+surface [INFORMATION]: Normalize detrended data constraints by z rms = 522.807
+surface [INFORMATION]: Select default convergence limit of 0.0522807 (100 ppm of L2 scale)
+surface [INFORMATION]: Recompute data index for next iteration [stride = 768]
+surface [INFORMATION]: ------------------------------------------
+surface [INFORMATION]: Memory for data array          :  456.5 Mb
+surface [INFORMATION]: Memory for final grid          :  270.3 Mb
+surface [INFORMATION]: Memory for Briggs coefficients :  456.5 Mb
+surface [INFORMATION]: Memory for node status         :   67.6 Mb
+surface [INFORMATION]: ------------------------------------------
+surface [INFORMATION]: Total memory use               :    1.2 Gb
+surface [INFORMATION]: ==========================================
+surface [INFORMATION]: Grid	Mode	Iteration	Max Change	Conv Limit	Total Iterations
+surface [INFORMATION]: Set finite-difference coefficients [stride = 768]
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 768]
+surface [INFORMATION]:  768	D	      24	4.66438574567e-05	6.80738225699e-05	        24
+surface [INFORMATION]: Recompute data index for next iteration [stride = 256]
+surface [INFORMATION]: Expand grid by factor of 3 when going from stride = 768 to 256
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 256]
+surface [INFORMATION]:  256	I	      59	0.000188494552449	0.00020422146771	        83
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 256]
+surface [INFORMATION]:  256	D	      20	9.12835254802e-05	0.00020422146771	       103
+surface [INFORMATION]: Recompute data index for next iteration [stride = 128]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 256 to 128
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 128]
+surface [INFORMATION]:  128	I	      38	0.00030929703632	0.000408442935419	       141
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 128]
+surface [INFORMATION]:  128	D	      25	0.000281437778492	0.000408442935419	       166
+surface [INFORMATION]: Recompute data index for next iteration [stride = 64]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 128 to 64
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 64]
+surface [INFORMATION]:   64	I	      36	0.000517796907042	0.000816885870839	       202
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 64]
+surface [INFORMATION]:   64	D	      27	0.000541358725895	0.000816885870839	       229
+surface [INFORMATION]: Recompute data index for next iteration [stride = 32]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 64 to 32
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 32]
+surface [INFORMATION]:   32	I	      32	0.00142829079862	0.00163377174168	       261
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 32]
+surface [INFORMATION]:   32	D	    6007	0.00163172265532	0.00163377174168	      6268
+surface [INFORMATION]: Recompute data index for next iteration [stride = 16]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 32 to 16
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 16]
+surface [INFORMATION]:   16	I	      30	0.00285747072212	0.00326754348335	      6298
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 16]
+surface [INFORMATION]:   16	D	   16000	0.00430502590098	0.00326754348335	     22298
+surface [INFORMATION]: Recompute data index for next iteration [stride = 8]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 16 to 8
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 8]
+surface [INFORMATION]:    8	I	      29	0.00492791000274	0.00653508696671	     22327
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 8]
+surface [INFORMATION]:    8	D	    4457	0.00653447782294	0.00653508696671	     26784
+surface [INFORMATION]: Recompute data index for next iteration [stride = 4]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 8 to 4
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 4]
+surface [INFORMATION]:    4	I	      26	0.0114729165502	0.0130701739334	     26810
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 4]
+surface [INFORMATION]:    4	D	    3937	0.0130490392405	0.0130701739334	     30747
+surface [INFORMATION]: Recompute data index for next iteration [stride = 2]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 4 to 2
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 2]
+surface [INFORMATION]:    2	I	      22	0.0200514933182	0.0261403478668	     30769
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 2]
+surface [INFORMATION]:    2	D	    1171	0.0261099334829	0.0261403478668	     31940
+surface [INFORMATION]: Recompute data index for next iteration [stride = 1]
+surface [INFORMATION]: Expand grid by factor of 2 when going from stride = 2 to 1
+surface [INFORMATION]: Fill in expanded grid by bilinear interpolation [stride = 1]
+surface [INFORMATION]:    1	I	      18	0.0416902530291	0.0522806957337	     31958
+surface [INFORMATION]: Determine nearest point and set Briggs coefficients [stride = 1]
+surface [INFORMATION]:    1	D	     358	0.0522274541684	0.0522806957337	     32316
+surface [INFORMATION]: Compute rms misfit and curvature.
+surface [INFORMATION]: Fit info: N data points  N nodes	mean error	rms error	curvature
+surface [INFORMATION]: 	19943433	70796545	1.72845812777e-06	0.0116986336794	120352.773092
+surface [INFORMATION]: Increase pad by 282 282 24 24
+surface [INFORMATION]: Writing grid to file pixel.grd
+grd2cpt [INFORMATION]: Reading CPT from File /opt/GMT-6.4.0/share/cpt/gmt/gray.cpt
+grd2cpt [INFORMATION]: Processing input grid(s)
+grd2cpt [INFORMATION]: netCDF grid topo_ra.grd has no default CPT.
+grd2cpt [INFORMATION]: Cartesian input grid
+grd2cpt [INFORMATION]: Reading grid from file topo_ra.grd
+grd2cpt [INFORMATION]: Cartesian input grid
+grd2cpt [INFORMATION]: gmt_grd_BC_set: Set boundary condition for all edges: natural
+grd2cpt [INFORMATION]: gmt_grd_BC_set: Set boundary condition for left   edge: natural
+grd2cpt [INFORMATION]: gmt_grd_BC_set: Set boundary condition for right  edge: natural
+grd2cpt [INFORMATION]: gmt_grd_BC_set: Set boundary condition for bottom edge: natural
+grd2cpt [INFORMATION]: gmt_grd_BC_set: Set boundary condition for top    edge: natural
+grd2cpt [INFORMATION]: Mean and S.D. of data are 953.348933897 615.286764877
+grd2cpt [INFORMATION]: z = -31.6530570984 and CDF(z) = 0
+grd2cpt [INFORMATION]: z = 164.82721711 and CDF(z) = 0.144576848083
+grd2cpt [INFORMATION]: z = 435.51052784 and CDF(z) = 0.230905715904
+grd2cpt [INFORMATION]: z = 630.692238933 and CDF(z) = 0.290028347254
+grd2cpt [INFORMATION]: z = 797.467814417 and CDF(z) = 0.377045694365
+grd2cpt [INFORMATION]: z = 953.348933897 and CDF(z) = 0.492021721041
+grd2cpt [INFORMATION]: z = 1109.23005338 and CDF(z) = 0.636609948452
+grd2cpt [INFORMATION]: z = 1276.00562886 and CDF(z) = 0.736192020171
+grd2cpt [INFORMATION]: z = 1471.18733995 and CDF(z) = 0.826945664832
+grd2cpt [INFORMATION]: z = 1741.87065068 and CDF(z) = 0.910937053974
+grd2cpt [INFORMATION]: z = 3480.08569336 and CDF(z) = 1
+grd2cpt [INFORMATION]: Write CPT to Stream Standard output stream
+grdimage [INFORMATION]: GMT_Parse_Options: Interval-setting -B options were reordered to appear before axis and frame -B options to ensure proper parsing.
+grdimage [INFORMATION]: GMT_Parse_Options: New option order: topo_ra.grd -JX7i -P -Ctopo_ra.cpt -V -K -Bxaf+lRange -Byaf+lAzimuth -BWSen
+grdimage [INFORMATION]: Read header from file topo_ra.grd
+grdimage [INFORMATION]: netCDF grid topo_ra.grd has no default CPT.
+grdimage [INFORMATION]: Cartesian input grid
+grdimage [INFORMATION]: Linear projection implies y-axis distance exaggeration relative to the x-axis by a factor of 1.79724
+grdimage [INFORMATION]: Auto-frame interval for x-axis (item 0): a5000f1000
+grdimage [INFORMATION]: Auto-frame interval for y-axis (item 0): a2000f1000
+grdimage [INFORMATION]: Map scale is 1.2324 km per cm or 1:123240.
+grdimage [INFORMATION]: Allocate and read data from file topo_ra.grd
+grdimage [INFORMATION]: Reading grid from file topo_ra.grd
+grdimage [INFORMATION]: Cartesian input grid
+grdimage [INFORMATION]: gmt_grd_BC_set: Set boundary condition for all edges: natural
+grdimage [INFORMATION]: gmt_grd_BC_set: Set boundary condition for left   edge: natural
+grdimage [INFORMATION]: gmt_grd_BC_set: Set boundary condition for right  edge: natural
+grdimage [INFORMATION]: gmt_grd_BC_set: Set boundary condition for bottom edge: natural
+grdimage [INFORMATION]: gmt_grd_BC_set: Set boundary condition for top    edge: natural
+grdimage [INFORMATION]: gmt_cpt_default: Use specific CPT: topo_ra.cpt
+grdimage [INFORMATION]: Reading CPT from File topo_ra.cpt
+grdimage [INFORMATION]: Evaluate image pixel colors
+grdimage [INFORMATION]: Basic z(x,y) -> gray image with no illumination.
+grdimage [INFORMATION]: Plotting 8-bit grayshade image
+PSL: DEFLATE compressed 66787776 to 11124942 bytes (83.3% savings at compression level 5)
+Topo range/azimuth map: topo_ra.pdf
+DEM2TOPO_RA.CSH - END
+NO TOPO_RA SHIFT 
+
+clean up intf/ folder
+rm: No match.
+
+ 
+INTF.CSH, FILTER.CSH - START
+......master LED file S1_20230128_153425_F1.LED 
+.........aligned LED file S1_20230209_153424_F1.LED 
+......master LED file S1_20230128_153425_F1.LED 
+.........aligned LED file S1_20230128_153425_F1.LED 
+intf.csh
+running phasediff...
+reading topo topo_ra.grd
+ xdim 21912, ydim 12192 
+filter.csh
+setting range_dec = 8, azimuth_dec = 2
+gauss_200 2 4 (1 2)
+making amplitudes...
+filtering interferogram...
+making amplitude...
+making correlation...
+making phase...
+filtering phase...
+INTF.CSH, FILTER.CSH - END
+
+SKIP UNWRAP PHASE
+
+SKIP GEOCODE
+
